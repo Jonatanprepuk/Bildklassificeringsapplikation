@@ -26,6 +26,9 @@ class MainApplication(tk.Frame):
         self.training_directories = []
         
         for d in os.listdir("Training_directories"):
+            if d.lower().endswith('.gitkeep'): #TODO 
+                continue
+            
             self.training_directories.append(f"Training_directories\{d}")
             
         
@@ -65,7 +68,6 @@ class MainApplication(tk.Frame):
         #TODO Kan inte ta bort knappar som skapades i tidigare session.
         
         for path in self.training_directories:
-            print(path)
             if os.path.basename(path) == button.cget("text"):
                 directory_to_remove = path
                 break
@@ -75,9 +77,7 @@ class MainApplication(tk.Frame):
         shutil.rmtree(directory_to_remove)     
 
     def train_model(self):
-        
         self.ml_model.train_and_save()
-        print(self.ml_model.get_training_history())
 
     def predict(self):
         self.prediction = self.ml_model.get_prediction(self.image)

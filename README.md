@@ -8,8 +8,8 @@ Detta projekt är en bildklassificeringsapplikation byggd med Python, Tkinter oc
 
 För att installera och köra detta projekt, följ dessa steg:
 
-1. Klona repot: `git clone https://github.com/ditt-användarnamn/ditt-projekt.git`
-2. Installera beroenden: `pip install tkinter PIL tkfilebrowser`
+1. Klona repot: `git clone https://github.com/Jonatanprepuk/Bildklassificeringsapplikation.git`
+2. Installera beroenden: `pip install requirements.txt`
 3. Kör projektet: `python main.py`
 
 ## Användning 💻
